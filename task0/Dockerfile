@@ -1,5 +1,5 @@
 # based on the latest ubuntu
-ubuntu:latest
+FROM ubuntu:latest
 
 # Update APT using apt-get update
 RUN apt-get update
