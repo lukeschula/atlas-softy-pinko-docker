@@ -13,7 +13,7 @@ RUN pip3 install flask
 
 # Use /app as the working directory and copy the Python file to your Docker image
 WORKDIR /app
-COPY ./api.py /app/api.py
+COPY api.py /app/api.py
 
 # default executable
 CMD python3 api.py
