@@ -7,5 +7,13 @@ RUN apt-get update
 # Upgrade currently installed software through APT
 RUN apt-get upgrade -y
 
-# Once running Docker image in container, "hello, world!" displays
-CMD ["echo", "Hello, World!"]
+# Install python3, python3-pip, and flask
+RUN apt-get install -y python3 python3-pip
+RUN pip3 install flask
+
+# Use /app as the working directory and copy the Python file to your Docker image
+WORKDIR /app
+COPY ./api.py /app/api.py
+
+# default executable
+CMD python3 api.py
