@@ -9,7 +9,7 @@ RUN apt-get upgrade -y
 
 # Install python3, python3-pip, and flask
 RUN apt-get install -y python3 python3-pip
-RUN pip3 install flask
+RUN pip3 install flask flask-cors
 
 # Use /app as the working directory and copy the Python file to your Docker image
 WORKDIR /app
