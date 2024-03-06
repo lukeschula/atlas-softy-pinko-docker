@@ -16,4 +16,5 @@ WORKDIR /app
 COPY api.py /app/api.py
 
 # default executable
+EXPOSE 5252
 CMD python3 api.py
